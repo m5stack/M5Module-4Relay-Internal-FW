@@ -7,12 +7,8 @@ jobs:
     strategy:
       matrix:
         path:
-          - check: './'    # path to include
+          - check: './Src'    # path to include
             exclude: ''    # path to exclude
-          # - check: 'src'
-          #   exclude: ''
-          # - check: 'examples'
-          #   exclude: ''
     steps:
     - uses: actions/checkout@v2
     - name: Run clang-format style check for C/C++/Protobuf programs.

@@ -1,8 +1,16 @@
-# M5Template-C-CPP
-Template for M5Stack C and CPP projects.
+## M5Module-4Relay-Internal-FW
 
-## Steps
+### Register
 
-1. Change [clang format check path](./.github/workflows/clang-format-check.yml#L9-L15).
-2. Add License content to [LICENSE](/LICENSE).
-3. Change this [README.md](./README.md#L1-L8).
+- Device addr: 0x26
+- 10H (R/W) Relay Control
+
+| Bit      | Default | Description    |
+| -------- | ------- | -------------- |
+| bit[4:7] | 0000    | reserved bits  |
+| bit[3]   | 0       | Relay 4 status |
+| bit[2]   | 0       | Relay 3 status |
+| bit[1]   | 0       | Relay 2 status |
+| bit[0]   | 0       | Relay 1 status |
+
+Note: 0 is OFF, 1 is ON
